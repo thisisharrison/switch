@@ -47,7 +47,7 @@ export default class Switch extends React.PureComponent<Props> {
             <>
                 <div className="comp-switch" onClick={this.handleClick}>
                     <input ref={this.input} type="checkbox" checked={this.state.checked} disabled={this.props.disabled} onChange={this.handleChange} />
-                    <span className="track" />
+                    <span className="track" role="switch" />
                 </div>
                 <div>props checked: {JSON.stringify(this.props.checked)}</div>
                 <div>state checked: {JSON.stringify(this.state.checked)}</div>
