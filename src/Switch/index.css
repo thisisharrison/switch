@@ -1,3 +1,52 @@
 .comp-switch {
-  display: block;
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.comp-switch input {
+  opacity: 1;
+  width: 50px;
+  height: 50px;
+}
+
+.track {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.track::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.comp-switch input:checked + .track {
+  background-color: #2196f3;
+}
+
+.comp-switch input:disabled + .track {
+  background-color: #ccc;
+}
+
+.comp-switch input:checked + .track::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
