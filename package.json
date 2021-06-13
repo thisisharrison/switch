@@ -2,11 +2,13 @@
   "name": "pinnacle-test",
   "version": "1.0.0",
   "license": "UNLICENSED",
+  "homepage": "https://thisisharrison.github.io/switch/",
   "scripts": {
     "start": "node start.js",
     "precommit": "node precommit.js",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "build": "webpack"
   },
   "dependencies": {
     "react": "16.6.3",
@@ -21,11 +23,14 @@
     "@types/node": "10.12.12",
     "@types/react": "16.7.13",
     "@types/react-dom": "16.0.11",
+    "awesome-typescript-loader": "^5.2.1",
     "css-loader": "1.0.1",
-    "html-webpack-plugin": "4.0.0-alpha",
+    "html-webpack-plugin": "^4.0.0-alpha",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.4",
+    "mini-css-extract-plugin": "^1.6.0",
     "prettier": "1.15.3",
+    "source-map": "^0.6.1",
     "style-loader": "0.23.1",
     "stylelint": "9.9.0",
     "stylelint-config-standard": "18.2.0",
@@ -35,7 +40,8 @@
     "tslint": "5.11.0",
     "tslint-react": "3.6.0",
     "typescript": "3.8",
-    "webpack": "4.26.1",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "3.1.10"
   },
   "jest": {

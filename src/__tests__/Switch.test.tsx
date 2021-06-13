@@ -29,7 +29,7 @@ describe("Controlled <Switch />", () => {
         expect(checkbox).toBeChecked();
     });
 
-    test("Swicth off", () => {
+    test("Switch off", () => {
         const [track, checkbox, onChange] = setUpControlledSwitch({checked: true});
         userEvent.click(track);
         expect(onChange).toBeCalledTimes(1);

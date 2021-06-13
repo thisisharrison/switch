@@ -60,7 +60,7 @@ export default class Switch extends React.PureComponent<Props, State> {
         return (
             <>
                 <div className="comp-switch" onClick={this.handleClick}>
-                    <input ref={this.input} type="checkbox" disabled={this.props.disabled} />
+                    <input ref={this.input} type="checkbox" disabled={!!this.props.disabled} />
                     <span className="track" role="switch" />
                 </div>
             </>
