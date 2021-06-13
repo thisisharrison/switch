@@ -6,9 +6,9 @@
 }
 
 .comp-switch input {
-  opacity: 1;
-  width: 50px;
-  height: 50px;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .track {
@@ -43,6 +43,10 @@
 
 .comp-switch input:disabled + .track {
   background-color: #ccc;
+}
+
+.comp-switch input:focus + .track::before {
+  box-shadow: 0 0 0 2px #f05f75;
 }
 
 .comp-switch input:checked + .track::before {
