@@ -58,12 +58,12 @@ class App extends React.Component<{}, State> {
                     <p>Disabled status: {JSON.stringify(this.state.isUncontrolledDisabled)}</p>
                     <p>Ref status: {JSON.stringify(this.state.isUncontrolledChecked)}</p>
                     <p style={{fontSize: "0.8rem"}}>(Click 'Get Latest Status' to update Ref status)</p>
-                    <button type="button" onClick={this.onToggleDisable} name="disable-uncontrolled">
-                        Toggle Disable
-                    </button>
-                    <br />
                     <button type="button" onClick={this.getUncontrolledSwitch}>
                         Get Latest Status
+                    </button>
+                    <br />
+                    <button type="button" onClick={this.onToggleDisable} name="disable-uncontrolled">
+                        Toggle Disable
                     </button>
                 </div>
             </div>
