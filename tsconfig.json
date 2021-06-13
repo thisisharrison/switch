@@ -15,7 +15,10 @@
     "suppressImplicitAnyIndexErrors": true,
     "strict": true,
     "downlevelIteration": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "outDir": "./build/",
+    "preserveConstEnums": true,
+    "removeComments": true
   },
   "include": ["./src"]
 }
