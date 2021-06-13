@@ -2,6 +2,7 @@
   "name": "pinnacle-test",
   "version": "1.0.0",
   "license": "UNLICENSED",
+  "homepage": "https://thisisharrison.github.io/switch/",
   "scripts": {
     "start": "node start.js",
     "precommit": "node precommit.js",
@@ -40,7 +41,7 @@
     "tslint-react": "3.6.0",
     "typescript": "3.8",
     "webpack": "^4.26.1",
-    "webpack-cli": "^4.7.2",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "3.1.10"
   },
   "jest": {
