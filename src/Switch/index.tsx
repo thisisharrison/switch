@@ -32,6 +32,16 @@ export default class Switch extends React.PureComponent<Props, State> {
         }
     }
 
+    // controlled mode can utilize props change to update internal state
+    static getDerivedStateFromProps(props: Props, state: State) {
+        if (props.checked !== undefined && props.checked !== state.checked) {
+            return {
+                checked: props.checked,
+            };
+        }
+        return null;
+    }
+
     handleClick() {
         const {disabled, checked, onChange} = this.props;
         if (disabled) {
@@ -42,9 +52,8 @@ export default class Switch extends React.PureComponent<Props, State> {
                 checkbox.focus();
                 checkbox.checked = !this.state.checked;
             }
-            if (this.props.hasOwnProperty("checked") && this.props.hasOwnProperty("onChange")) {
-                this.setState({checked: !this.props.checked});
-                onChange!(!checked);
+            if (onChange !== undefined) {
+                onChange(!checked);
             } else {
                 this.setState(prevState => ({checked: !prevState.checked}));
             }
