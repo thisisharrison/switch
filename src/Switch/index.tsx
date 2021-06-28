@@ -33,8 +33,8 @@ export default class Switch extends React.PureComponent<Props, State> {
     }
 
     // controlled mode can utilize props change to update internal state
-    static getDerivedStateFromProps(props: any, state: any) {
-        if (props.hasOwnProperty("checked") && props.checked !== state.checked) {
+    static getDerivedStateFromProps(props: Props, state: State) {
+        if (props.checked !== undefined && props.checked !== state.checked) {
             return {
                 checked: props.checked,
             };
