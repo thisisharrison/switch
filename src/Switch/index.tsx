@@ -53,13 +53,8 @@ export default class Switch extends React.PureComponent<Props, State> {
                 checkbox.checked = !this.state.checked;
             }
             if (onChange !== undefined) {
-                // we don't have to setState here now,
-                // because after onChange is called, new props are passed for controlled component
-                // we will update state in getDerivedStateFromProps
-                // 🙅 this.setState({checked: !this.props.checked});
                 onChange(!checked);
             } else {
-                // component in uncontrolled mode (no onChange handler), we setState here
                 this.setState(prevState => ({checked: !prevState.checked}));
             }
         }
